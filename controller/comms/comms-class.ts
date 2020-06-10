@@ -1,5 +1,5 @@
 import * as WebSocket from 'ws';
-import {Message} from "../../ui/src/app/global-interfaces/comms-message"
+import {Message} from "./comms-message"
 
 export class Comms {
 
