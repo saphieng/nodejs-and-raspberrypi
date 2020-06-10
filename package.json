@@ -1,0 +1,49 @@
+{
+  "name": "nodejs-embedded-boiler",
+  "version": "0.0.0",
+  "bin": "./build/controller/main.js",
+  "description": "Boilerplate project for getting started with embedded project running built with nodejs",
+  "engines": {
+    "node": ">= 12.13 <13"
+  },
+  "devDependencies": {
+    "@types/jest": "~25.2.1",
+    "@types/node": "~12.12.38",
+    "@typescript-eslint/eslint-plugin": "~2.32.0",
+    "@typescript-eslint/parser": "~2.32.0",
+    "eslint": "~7.0.0",
+    "eslint-config-prettier": "~6.11.0",
+    "eslint-plugin-jest": "~23.10.0",
+    "jest": "~25.2.7",
+    "prettier": "~2.0.5",
+    "rimraf": "~3.0.2",
+    "ts-jest": "~25.5.1",
+    "tsutils": "~3.17.0",
+    "typescript": "~3.8.3"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "start": "npm run build && node ./build/controller/main.js",
+    "package-windows": "pkg -t windows --output ./bin/nodejs-boiler-win  .",
+    "package-linux": "pkg -t linux --output ./bin/nodejs-boiler-linux  .",
+    "package-macos": "pkg -t macos --output ./bin/nodejs-boiler-macos  ."
+  },
+  "author": "SAPHI <contact@saphi.com.au>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pkg": "^4.4.8",
+    "tslib": "~1.11.2",
+    "ws": "^7.3.0"
+  },
+  "pkg": {
+    "assets": ["./build/dist/**/*"]
+  }
+}

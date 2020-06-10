@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="view" style="background-color: #37474F;  background-size: cover;">
+    <!-- Mask & flexbox options-->
+    <div class="mask align-items-center">
+
+            <div class="container" style="padding-top: 1rem;">
+            <mdb-card>
+                <!--Card image-->
+                <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img> -->
+                <!--Card content-->
+                <mdb-card-body>
+            
+                <!--Title-->
+                <mdb-card-title>
+                    <h4>Send To Controller</h4>
+                </mdb-card-title>
+            
+                <!--Text-->
+                <mdb-card-text> This is an example of how you can send a string to the controller.
+                </mdb-card-text>
+
+                <input mdbInput type="text" class="form-control" placeholder="Enter string to send" [(ngModel)]="commandAndData">
+                <br>
+                <button mdbBtn type="button" color="primary" block="true" mdbWavesEffect (click)="send()">Send</button>
+                </mdb-card-body>
+            </mdb-card>
+        </div>
+        <div class="container" style="padding-top: 1rem;">
+            <mdb-card >
+                <!--Card image-->
+                <!-- <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap"></mdb-card-img> -->
+                <!--Card content-->
+                <mdb-card-body>
+            
+                <!--Title-->
+                <mdb-card-title>
+                    <h4>Response From Controller</h4>
+                </mdb-card-title>
+            
+                <!--Text-->
+                <mdb-card-text *ngIf="receivedData"> {{receivedData}}
+                </mdb-card-text>
+
+                </mdb-card-body>
+            </mdb-card>
+        </div>
+
+    </div>
+</div>
