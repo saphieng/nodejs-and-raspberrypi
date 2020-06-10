@@ -1,5 +1,5 @@
 
-# nodejs-embedded-boilerplate
+# NodeJS and Raspberry Pi
 
 👩🏻‍💻 Developer Ready: A comprehensive template. Works out of the box for most [Node.js][nodejs] projects.
 
