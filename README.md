@@ -83,15 +83,53 @@ Once you run your Raspberry Pi DietPi image for the first time you will be taken
 You can also go throught the optional software list at this point and see if here is anything else you want.
 Once the setup is complete you will be asked to reboot.
 
-### Troubleshooting
+### __Installing NVM__
+
+For installing on your **simulated environment** run:
+```
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+Then reboot your terminal window.
+
+For installing on your **Raspberry Pi** do the following:
+```
+$ git clone https://github.com/creationix/nvm.git ~/.nvm
+$ echo "source ~/.nvm/nvm.sh" >> ~/.bashrc && sudo echo "source ~/.nvm/nvm.sh" >> ~/.profile
+```
+Then reboot your terminal window.
+
+### __Setting up NVM__
+Once you have re-opened your terminal window you can check NVM is working by running:
+```
+nvm --version
+```
+and confirming you get a version number
+
+Now we want to install NodeJS. You can pick a specific version or install the latest or LTS support version. Will use the the LTS version:
+```
+nvm install --lts
+```
+It will install and once complete you can run:
+```
+node -v
+```
+and you should get a version that matches the current LTS version of node.
+
+### __Troubleshooting__
 I did run into a small problem recently with DietPi on setup where it can't complete due to 
 ```
 Connection timed out. wget: unable to resolve host address ‘raw.githubusercontent.com’
 ``` 
 I documented the startup issue and how to get around it [here](https://github.com/MichaIng/DietPi/issues/3598)
 
+I also ran into a **Windows 10 NVM issue** where the CheckSums would never match for any of the install commands. I solved this by running:
+```
+bcdedit /set hypervisorlaunchtype off
+```
+in an Adminstrator cmd window followed by a reboot of my computer.
 
-### Use as a repository template
+
+### __Use as a repository template__
 
 To start, just click the **[Use template][repo-template-action]** link (or the green button). Now start adding your code in the `src` and unit tests in the `__tests__` directories.
 
