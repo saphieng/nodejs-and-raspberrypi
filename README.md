@@ -93,8 +93,8 @@ Then reboot your terminal window.
 
 For installing on your **Raspberry Pi** do the following:
 ```
-$ git clone https://github.com/creationix/nvm.git ~/.nvm
-$ echo "source ~/.nvm/nvm.sh" >> ~/.bashrc && sudo echo "source ~/.nvm/nvm.sh" >> ~/.profile
+git clone https://github.com/creationix/nvm.git ~/.nvm
+echo "source ~/.nvm/nvm.sh" >> ~/.bashrc && sudo echo "source ~/.nvm/nvm.sh" >> ~/.profile
 ```
 Then reboot your terminal window.
 
@@ -113,7 +113,7 @@ It will install and once complete you can run:
 ```
 node -v
 ```
-and you should get a version that matches the current LTS version of node.
+and you should get a version that matches the current LTS version of node. The full forum post on Virtual Box checksum issues can be found [here](https://forums.virtualbox.org/viewtopic.php?f=1&t=62339).
 
 ### __Troubleshooting__
 I did run into a small problem recently with DietPi on setup where it can't complete due to 
