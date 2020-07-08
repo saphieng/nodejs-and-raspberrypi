@@ -19,7 +19,7 @@ This repo will give you a NodeJS boilerplate for running getting started for pro
 
 🤲 Free as in speech: available under the APLv2 license.
 ## Demo and Video Tutorial
-If you want to see a video demo of the final result of the app and how to build it step-by-step check out this stream where I take you through it: [Running NodeJS on Raspberry Pi](https://youtu.be/v5GKHT2JDlA?t=5372)
+If you want to see a video demo of the final result of the app and how to build it step-by-step check out this stream where I take you through it: [Running NodeJS on Raspberry Pi](https://youtu.be/v5GKHT2JDlA?t=5457)
 
 ## Step 1: Setup your Raspberry Pi
 Firstly we need to setup the device we will be coding on. If you have a Raspberry Pi then follow on. 
